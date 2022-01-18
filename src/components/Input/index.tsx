@@ -14,12 +14,6 @@ interface Props {
   onImageDeleteClick?: () => void;
 }
 
-type OnChangePayload<T extends { type: "text" | "image" }> = T extends {
-  type: "text";
-}
-  ? React.ChangeEvent<HTMLInputElement>
-  : string;
-
 // type Props = {
 //   className?: string;
 //   placeholder?: string;

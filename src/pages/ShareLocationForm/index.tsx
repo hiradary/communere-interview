@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { ModalWrapper, Reoverlay } from "reoverlay";
 import classNames from "classnames";
 import Select from "react-select";
