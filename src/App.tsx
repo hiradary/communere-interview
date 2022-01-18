@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Reoverlay, ModalContainer } from "reoverlay";
+
+import Home from "pages/Home";
+import ShareLocationForm from "pages/ShareLocationForm";
+import Location from "pages/Location";
+import "reoverlay/lib/ModalWrapper.css";
+
+Reoverlay.config([
+  {
+    name: "ShareLocationFormModal",
+    component: ShareLocationForm,
+  },
+  {
+    name: "LocationModal",
+    component: Location,
+  },
+]);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Home />
+      <ModalContainer />
+    </>
   );
 }
 
