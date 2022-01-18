@@ -61,6 +61,7 @@ const ShareLocationForm = ({ cords, id }: Props) => {
     setLogo(logo);
     setType(type);
     setMapCords(cords);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id, isEdit]);
 
   return (
